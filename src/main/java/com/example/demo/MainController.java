@@ -30,4 +30,14 @@ public class MainController {
     public String dashboardDesign(){
         return "dashboardDesign";
     }
+
+    @RequestMapping("/additionalResources")
+    public String additionalResources(){
+        return "additionalResources";
+    }
+
+    @RequestMapping("/aboutMe")
+    public String aboutMe(){
+        return "aboutMe";
+    }
 }

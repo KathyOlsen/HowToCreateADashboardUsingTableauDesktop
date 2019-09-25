@@ -1,37 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Prepare Your Data</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../mystyles.css">
+    <div th:insert="base :: head"></div>
 </head>
 
 <body>
-<nav class="nav">
-    <a class="nav-link" href="#">Home</a>
-    <a class="nav-link active" href="#"><strong>Prepare Your Data</strong></a>
-    <a class="nav-link" href="#">Create Individual Pages</a>
-    <a class="nav-link" href="#">Assemble Your Dashboard</a>
-    <a class="nav-link" href="#">Dashboard Design Tips</a>
-</nav>
+<div th:insert="base :: navlinks"></div>
 <div class="container">
     <div class="jumbotron">
-        <h1 style="text-align: center"><strong>Prepare Your Data</strong></h1>
-
+        <h1><strong>Prepare Your Data</strong></h1>
+        <br>
+        <p>There are many ways to connect to data from within Tableau,
+            including external databases, PDF files,
+            Excel spreadsheets, and "flat files" like csv (comma
+            separated value) files that might hold data prepared using
+            Python or R.</p>
+        <h2>Tips:</h2>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Where possible, before bringing your data
+                            into Tableau, assemble your data into one
+                            file, clean up formatting and spelling errors,
+                            and delete unnecessary information.</li>
+                            <br>
+                        <li>If you use Excel to prepare your data:</li>
+                            <ul>
+                                <li>Eliminate spreadsheet titles, subheadings,
+                                    footnotes, remarks, and comments from
+                                    the body of the spreadsheet.</li>
+                                <li>Footnotes or comments can be added as
+                                    an additional column to the spreadsheet
+                                    IF they relate to particular lines and
+                                    are given a column title.</li>
+                                <li>Delete subtotals and totals.</li>
+                                <li>Make sure that each column's name and
+                                    its data align properly.</li>
+                            </ul>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul>
+                        <li>Tableau will read the first line of your data as
+                            column names and each subsequent row as a row of
+                            data. Therefore:</li>
+                            <ul>
+                                <li><strong>DO NOT include totals in your data.</strong></li>
+                                <li><strong>DO NOT put your data in a matrix.</strong></li>
+                                <li><strong>DO NOT include an extra heading
+                                    over a group of columns.</strong></li>
+                            </ul>
+                        <br>
+                        <li>Tableau will mis-read your data if you do any
+                            of those.</li>
+                        <br>
+                        <li>You can use <a href="https://www.tableau.com/products/prep/download">
+                            Tableau Prep</a> to assist in preparing your data,
+                            but it still is best to do as much as possible outside
+                            Tableau Prep before using it.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>Here is an example of how your data might look when properly
+            organized:</p>
+        <img src="https://res.cloudinary.com/dhg2lpfid/image/upload/v1569387452/Screenshot_Portion_of_Data_from_Georgia_Tableau_Dashboard_msobbe.png"
+             alt="Tableau Data Organization"
+             class="center"
+             height="250">
+        <br>
+        <h2>So I Did All That.  Now What?</h2>
+        <br>
+        <p>When you open Tableau Desktop, in the upper left corner you select what
+            type of date file you are importing. Once you have done so and found
+            and selected your file, click on ____ in the bottom left corner to see
+            the Data Pane.</p>
+        <p>In the Data Pane, you can:</p>
+        <ul>
+            <li>Join sheets if there are more than one and they contain overlapping
+                categories.</li>
+            <li>Modify names and data types for each column.</li>
+            <li>Pivot columns, to correct layout.</li>
+            <li>Hide columns you do not anticipate using. This will reduce clutter in
+                the lists of measures and dimensions that appears on the left side in a
+                page tab.</li>
+            <li>Choose to use live data or a data extract.  Using an extract can save
+                processing time, especially while you are developing your dashboard.</li>
+        </ul>
+        <h3> Next: Learn how to <a href="/createPages">Create Individual Pages.</a></h3>
 
     </div>
 </div>
+<div th:insert="base :: footer"></div>
+<div th:insert="base :: bootstrapScripts"></div>
 </body>
-<footer style="padding-left: 20px; padding-right: 20px; padding-bottom: 15px">
-    <h6>Tableau&#0174 is a registered trademark of Tableau Software, Inc. The creator of
-        this web page is not an employee or owner of or in any other way affiliated with
-        Tableau Software, Inc. or any related entity. Although she does own a Tableau&#0174
-        promotional ballpoint pen and is a certified Tableau Desktop Specialist.</h6>
-</footer>
 </html>

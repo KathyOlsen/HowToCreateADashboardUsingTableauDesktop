@@ -1,44 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>How to Create a Dashboard Using Tableau Desktop</title>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-          crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../mystyles.css">
+    <title>Create a Dashboard Using Tableau</title>
+    <div th:insert="base :: head"></div>
 </head>
 <body>
-<nav class="nav">
-    <a class="nav-link active" href="#"><strong>Home</strong></a>
-    <a class="nav-link" href="#">Prepare Your Data</a>
-    <a class="nav-link" href="#">Create Individual Pages</a>
-    <a class="nav-link" href="#">Assemble Your Dashboard</a>
-    <a class="nav-link" href="#">Dashboard Design Tips</a>
-</nav>
+<div th:insert="base :: navlinks"></div>
 <div class="container">
     <div class="jumbotron">
-        <h1 style="text-align: center"><strong>How to Create a Dashboard</strong></h1>
-        <h2 style="text-align: center">Using Tableau&#0174 Desktop</h2>
+        <h1 style="text-align: center"><strong>How to Create a Dashboard Using Tableau&#0174</strong></h1>
         <br>
-        <p>Interested in learning how to create dashing dashboards in Tableau&#0174 to
+        <p>Interested in learning how to create dashing dashboards in Tableau to
             showcase your amazing analyses?
             Here are some suggestions to help you get started.</p>
-        <p>You can download Tableau&#0174 Desktop
-            <a href ="https://www.tableau.com/products/desktop/download">here</a>.</p>
+        <p>You can download Tableau Desktop
+            <a href ="https://www.tableau.com/products/desktop/download">here</a>.
+            Using Tableau Desktop gives you privacy and you can post your completed
+            dashboard to <a href="https://public.tableau.com/en-us/s/">Tableau Public</a>
+            if you so desire.</p>
+        <p>Alternatively, you can create a dashboard without downloading anything using
+            <a href="https://sso.online.tableau.com/public/idp/SSO">Tableau Online</a>.
+            Never use this option (or post to Tableau Public) if you are using proprietary
+            (company) data.</p>
         <br>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-sm-6">
                     <h2>Prepare Your Data</h2>
                     <p>Ensure your data is properly organized and cleaned up <i>before</i>
-                        you bring it into Tableau&#0174.</p>
+                        you bring it into Tableau.</p>
                     <p><a href ="/prepareData">More . . .</a></p>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                     <h2>Create Individual Pages</h2>
                     <p>Create multiple individual pages to explore your data.  You can always
                         prune down the number later.</p>
@@ -47,36 +40,32 @@
             </div>
             <br>
             <div class="row">
-                <div class="col">
+                <div class="col-sm-6">
                     <h2>Assemble Your Dashboard</h2>
                     <p>Use the individual pages you have created to assemble
                         a preliminary dashboard, then add additional elements.</p>
                     <p><a href ="/assembleDashboard">More . . .</a></p>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                     <h2>Dashboard Design Tips</h2>
                     <p>Keep your dashboard as simple, uncluttered, and unified as
                         possible. Make it interactive.</p>
                     <p><a href ="/dashboardDesign">More . . .</a></p>
                 </div>
             </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <h2>Additional Resources</h2>
+                    <p>Extensive additional resources are available.</p>
+                    <p><a href ="/additionalResources">More . . .</a></p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-crossorigin="anonymous"></script>
+<div th:insert="base :: footer"></div>
+<div th:insert="base :: bootstrapScripts"></div>
 </body>
-<footer style="padding-left: 20px; padding-right: 20px; padding-bottom: 15px">
-    <h6>Tableau&#0174 is a registered trademark of Tableau Software, Inc. The creator of
-        this web page is not an employee or owner of or in any other way affiliated with
-        Tableau Software, Inc. or any related entity. Although she does own a Tableau&#0174
-        promotional ballpoint pen and is a certified Tableau Desktop Specialist.</h6>
-</footer>
 </html>

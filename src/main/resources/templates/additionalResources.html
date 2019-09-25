@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Additional Resources</title>
+    <div th:insert="base :: head"></div>
+</head>
+<body>
+<div th:insert="base :: navlinks"></div>
+<div class="container">
+    <div class="jumbotron">
+        <h1><strong>Additional Resources</strong></h1>
+        <br>
+        <p>There are many resources available online
+            and in published books.</p>
+        <p>A small selection include:</p>
+        <ul>
+            <li>Significant advice provided by Tableau.
+                See for example their:</li>
+                <ul>
+                    <li><a href="https://www.tableau.com/learn/whitepapers">
+                        White Papers</a> on many topics.</li>
+                    <li><a href="https://www.tableau.com/support/desktop">
+                        Tableau Desktop Articles</a></li>
+                    <li><a href="https://www.tableau.com/support/online">
+                        Tableau Online Articles</a></li>
+                    <li><a href="https://www.tableau.com/support/prep">
+                        Tableau Prep Articles</a></li>
+                    <li><a href="https://www.tableau.com/support/public">
+                        Tableau Public Articles</a></li>
+                    <li><a href="https://www.tableau.com/learn/elearning">
+                    e-Learning Tutorials</a></li>
+                </ul>
+            <br>
+            <li>Ryan Sleeper, <u>Practical Tableau: 100 Tips, Tutorials,
+                and Strategies From A Tableau Zen Master</u> (O'Reilly 2018).</li>
+            <br>
+            <li>Steve Wexler, Jeffrey Shaffer & Andy Cotgreave, <u>The Big
+                Book of Dashboards: Visualizing Your Data Using Real-World
+                Business Scenarios</u> (Wiley 2017).</li>
+        </ul>
+    </div>
+</div>
+<div th:insert="base :: footer"></div>
+<div th:insert="base :: bootstrapScripts"></div>
+</body>
+</html>

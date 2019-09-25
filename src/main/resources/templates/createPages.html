@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Create Individual Pages</title>
+    <div th:insert="base :: head"></div>
 </head>
-<body>
 
+<body>
+<div th:replace="base :: navlinks"></div>
+<div class="container">
+    <div class="jumbotron">
+        <h1 style="text-align: center"><strong>Create Individual Pages</strong></h1>
+
+
+    </div>
+</div>
+<div th:insert="base :: footer"></div>
+<div th:insert="base :: bootstrapScripts"></div>
 </body>
 </html>

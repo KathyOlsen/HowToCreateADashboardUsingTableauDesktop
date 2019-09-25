@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Base</title>
+    <div th:fragment="head">
+        <meta charset=" UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../myStyles.css">
+    </div>
+</head>
+
+<body>
+<div th:fragment="navlinks">
+    <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/prepareData">Prepare Your Data</a>
+        <a class="nav-link" href="/createPages">Create Individual Pages</a>
+        <a class="nav-link" href="/assembleDashboard">Assemble Your Dashboard</a>
+        <a class="nav-link" href="/dashboardDesign">Dashboard Design Tips</a>
+        <a class="nav-link" href="/additionalResources">Additional Resources</a>
+        <a class="nav-link" href="/aboutMe">About the Author</a>
+    </nav>
+</div>
+<div th:fragment="bootstrapScripts">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</div>
+</body>
+
+<div th:fragment="footer" style="padding-left: 80px; padding-right: 80px; padding-bottom: 15px"
+     font-family="'Gurajada', serif">
+    <h6>Tableau&#0174 is a registered trademark of Tableau Software, Inc. The creator of
+        this web page is not an employee or owner of or in any other way affiliated with
+        Tableau Software, Inc. or any related entity. Although she does own a Tableau&#0174
+        promotional ballpoint pen.</h6>
+    <h6>Copyright&#0169; Katherine K. Olsen 2019. All rights reserved.</h6>
+</div>
+
+<div th:fragment="footer2" style="padding-left: 80px; padding-right: 80px; padding-bottom: 15px"
+     font-family="'Gurajada', serif">
+    <h6>Copyright&#0169; Katherine K. Olsen 2019. All rights reserved.</h6>
+</div>
+</html>
